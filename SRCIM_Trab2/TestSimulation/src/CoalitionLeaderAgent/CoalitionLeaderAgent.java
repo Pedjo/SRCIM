@@ -365,6 +365,7 @@ public class CoalitionLeaderAgent extends Agent {
             System.out.println("*********************** Product not executed ***********************");
             execSkiBeh.skipNext();
             SequentialBehaviour execSkiBeh2 = new SequentialBehaviour();
+			msg2.setPerformative(ACLMessage.REFUSE);
             execSkiBeh2.addSubBehaviour(new InformPA(myAgent, msg2));
             myAgent.addBehaviour(execSkiBeh2);
         }
